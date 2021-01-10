@@ -1,0 +1,95 @@
+<!--
+    
+    STEPS:
+    *ADD SCRIPT INSIDE HEAD
+       <script src="https://clique.com.ph/library/fordee.min.js"></script>
+
+    *INITIALIAZE FORDEE IN JS
+        => fordee.init();
+
+    *OPTIONAL
+        =* you can declare fordee in variable
+        => const anyname = fordee();
+        => then use it as anyname.animationame();
+
+    *fordee().scrollAnimate(param1,param2,param3)
+        =* param1 = ID or CLASS or CLASSES
+        =* param2 = CSS CLASS TO ADD/REMOVE
+        =* param3(OPTIONAL) = OPTIONS 
+            visiblearea = visible area coverage (
+                    1 = 25% OF HEIGHT
+                    2 = 50% OF HEIGHT
+                    3 = 75% OF HEIGHT
+                    4 = 100% OF HEIGHT
+                )
+            timeout = start after a specified number of milliseconds.
+
+        EXAMPLES: 
+        anyname.scrollAnimate('sampleid','class',{visiblearea:1,timeout:3000}) 
+            < OR > 
+        anyname.scrollAnimate('sampleid','class',{visiblearea:1})
+            < OR >
+        anyname.scrollAnimate('sampleid','class',{timeout:1000})
+            < OR >
+        anyname.scrollAnimate('sampleid','class')
+    
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORDEE - ANIMATION</title>
+    <link rel="stylesheet" href="https://www.clique.com.ph/library/style.css"></link>
+    <!-- <script src="https://clique.com.ph/library/fordee.min.js"></script> -->
+    <script src="fordee.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <div class="content">
+            <h1>FIRST</h1>
+        </div>
+        <div class="content bg-purp">
+            <h1 class="hides">SECOND</h1>
+            <h1 class="hides">SECOND</h1>
+            <h1 class="hidex" id="sample3">SECOND</h1>
+            <h1 class="hidex" id="sample4">SECOND</h1>
+            <h1 class="hidex" id="sample5">SECOND</h1>
+        </div>
+        <div class="content">
+            <h1 class="hide">THIRD</h1>
+            <h1 class="hide">THIRD</h1>
+            <h1 class="hide">THIRD</h1>
+        </div>
+    </main>
+    <script>
+        fordee.init();
+        
+        const anyname = fordee();
+
+        // SAMPLE 
+            anyname.scrollAnimate('.hides','active',{visibleArea:1,timeOut:1000});
+        
+        // SAMPLE 
+            anyname.scrollAnimate('.hide','active',{visibleArea:1});
+        
+        // SAMPLE 
+            anyname.scrollAnimate('sample3','active');
+
+        // SAMPLE 
+            anyname.scrollAnimate('sample4','active');
+        
+        // SAMPLE 
+        const config = {
+            visibleArea:1,
+            timeOut:5000
+        }
+        anyname.scrollAnimate('sample5', 'active', config);
+
+    </script>
+</body>
+</html>

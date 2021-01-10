@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1000px;
+  height: 760px;
+  background-color: white;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+}
+
+.hide {
+  color: red;
+  visibility: collapse;
+  transition: 1s ease-in-out;
+  transform: translateX(15vh);
+}
+
+.hides {
+  color: red;
+  visibility: collapse;
+  transition: 1s ease-in-out;
+  transform: translateX(-15vh);
+}
+
+.hidex {
+    color: red;
+    visibility: collapse;
+    transition: 1s ease-in-out;
+    transform: translateX(15vh);
+  }
+
+.active {
+  visibility: visible;
+  transform: translateX(0vh);
+}
+
+.bg-purp {
+  background-color: gainsboro;
+}

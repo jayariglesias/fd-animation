@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOGGLE ANIMATION</title>
+    <script src="https://clique.com.ph/library/fordee.min.js"></script>
+</head>
+<style>
+    .hide {
+        display: none;
+    }
+
+    .con {
+        cursor: pointer;
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div>
+        <p>Home</p>
+        <p onclick="fd.toggle('about-nav', 'hide');">About</p>
+        <div class="con hide" id="about-nav">
+            <p>About-Sample</p>
+            <p>About-Sample</p>
+            <p>About-Sample</p>
+        </div>
+        <p>Contact</p>
+    </div>
+
+    <script>
+        fordee.init();
+        const fd = fordee();
+
+        // YOU CAN ALSO PUT INSIDE A FUNCTION
+        function toggle() {
+            fd.toggle('about-nav', 'hide');
+        }
+    </script>
+</body>
+</html>
