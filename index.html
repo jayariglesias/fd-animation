@@ -25,13 +25,13 @@
             timeout = start after a specified number of milliseconds.
 
         EXAMPLES: 
-        anyname.scrollAnimate('sampleid','class',{visiblearea:1,timeout:3000}) 
+        anyname.scrollAppear('sampleid','class',{visiblearea:1,timeout:3000}) 
             < OR > 
-        anyname.scrollAnimate('sampleid','class',{visiblearea:1})
+        anyname.scrollAppear('sampleid','class',{visiblearea:1})
             < OR >
-        anyname.scrollAnimate('sampleid','class',{timeout:1000})
+        anyname.scrollAppear('sampleid','class',{timeout:1000})
             < OR >
-        anyname.scrollAnimate('sampleid','class')
+        anyname.scrollAppear('sampleid','class')
     
 -->
 
@@ -43,9 +43,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORDEE - ANIMATION</title>
-    <link rel="stylesheet" href="https://www.clique.com.ph/library/style.css"></link>
-    <!-- <script src="https://clique.com.ph/library/fordee.min.js"></script> -->
-    <script src="fordee.js"></script>
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="fordee.min.js"></script>
 </head>
 
 <body>
@@ -72,16 +71,16 @@
         const anyname = fordee();
 
         // SAMPLE 
-            anyname.scrollAnimate('.hides','active',{visibleArea:1,timeOut:1000});
+            anyname.scrollAppear('.hides','active',{visibleArea:1,timeOut:1000});
         
         // SAMPLE 
-            anyname.scrollAnimate('.hide','active',{visibleArea:1});
+            anyname.scrollAppear('.hide','active',{visibleArea:1});
         
         // SAMPLE 
-            anyname.scrollAnimate('sample3','active');
+            anyname.scrollAppear('sample3','active');
 
         // SAMPLE 
-            anyname.scrollAnimate('sample4','active');
+            anyname.scrollAppear('sample4','active');
         
         // SAMPLE 
         const config = {
